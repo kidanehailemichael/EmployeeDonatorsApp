@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Donor New Form</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylsheet" href="./css/style.css">
+</head>
+<body>
+<div class="container">
+<h1>Donor New Form</h1>
+<hr>
+<h2>Save Donor</h2>
+
+<form action="#" th:action="@{/saveDonor}" th:object="${donor}" method="POST">
+
+<input type="text" th:field="*{firstName}" placeholder="Donor First Name" class="form-control mb-4 col-4" required>
+
+<input type="text" th:field="*{lastName}" placeholder="Donor Last Name" class="form-control mb-4 col-4" required>
+
+
+
+<input type="text" th:field="*{email}" placeholder="Donor Email" class="form-control mb-4 col-4" required>
+
+
+<input type="text" th:field="*{phone}" placeholder="Donor Phone" class="form-control mb-4 col-4" required>
+
+
+
+
+<button type="submit" class="btn btn-info col-2">Save Donor</button>
+
+
+</form>
+
+</div>
+
+
+</body>
+</html>

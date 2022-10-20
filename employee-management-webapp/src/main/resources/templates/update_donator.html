@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:/www.thymeleaf.org">>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylsheet" href="./css/style.css">
+</head>
+<body>
+<div class="container">
+<h1>Donor Update Form</h1>
+<hr>
+<h2>Update Donor</h2>
+
+
+
+<form action="#" th:action="@{/saveDonor}" th:object="${donator}" method="POST">
+
+<input type="hidden" th:field="*{id}"/>
+
+<input type="text" th:field="*{firstName}"  class="form-control mb-4 col-4">
+
+<input type="text" th:field="*{lastName}"  class="form-control mb-4 col-4">
+
+<input type="text" th:field="*{email}"  class="form-control mb-4 col-4">
+
+<input type="text" th:field="*{phone}"  class="form-control mb-4 col-4">
+
+
+<button type="submit" class="btn btn-info col-2">Update Donor</button>
+
+
+</form>
+<a th:href="@{/donorlist}">Back to Donor's list</a>
+</div>
+
+
+</body>
+</html>
